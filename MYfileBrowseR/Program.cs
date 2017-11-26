@@ -67,7 +67,16 @@ namespace Myfilebrowser
             }
         }
 
-        
+        private static void AllSubDirectorysInCurrentDirectory()
+        {
+            Console.WriteLine("directory");
+
+            string[] dirs = Directory.GetDirectories(Environment.CurrentDirectory);
+            foreach (string dir in dirs)
+            {
+                Console.WriteLine(Path.GetFileName(dir));
+            }
+        }
     }
 }
 
